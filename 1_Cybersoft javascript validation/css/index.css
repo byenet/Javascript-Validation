@@ -1,0 +1,27 @@
+.form-group{
+    position: relative;
+    width: 500px;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+i.fa-check-circle {
+    color: #2ecc71;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    font-size: 20px;
+}
+
+i.fa-exclamation-circle {
+    color: #e74c3c;
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 42%;
+    font-size: 20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- use Bootstrap library --> 
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- use form.js script to validate main form --> 
+	<script src="./js/form.js"></script>
+
+	<title>Form Validation App</title>
+	<script type="text/javascript">
+
+	</script>
+	<style> 
+		form { 
+			margin: 10%; 
+		}
+		.errorHeader { 
+			font-weight: bold; 
+			color: red;
+			/* visibility: hidden; */ 
+			display: none; 
+		}
+	</style>
+</head>	
+
+<body>
+	<h1> Form Validation App</h1>
+
+	<form id="my_form" name="my_form" action="#" method="post"> 
+		<!-- this: onsubmit="return checkForm();"  can be used instead of onsubmit event handler addition in form.js file -->
+
+		<div class="form-group has-feedback"> 
+			<label for="firstNameInput">First name * </label> 
+			<input type="text" class="form-control" name="firstNameInput" id="firstNameInput" placeholder="Jane" aria-describedby="firstNameInputStatus" onblur="firstNameValidate()">
+			<span id="firstNameIcon"></span>
+			<span id="firstNameInputStatus" class="errorHeader">First name filed is required!</span>
+		</div> 
+		<br />
+		<div class="form-group has-feedback"> 
+			<label for="lastNameInput">Last name * </label>
+			<input type="text" class="form-control" name="lastNameInput" id="lastNameInput" placeholder="Doe" aria-describedby="lastNameInputStatus"> 
+			<span id="lastNameIcon" aria-hidden="true"></span>
+			<span id="lastNameInputStatus" class="errorHeader">Last name field is required!</span>
+		</div>	
+		<br />
+		<div class="form-group has-feedback"> 
+			<label for="emailInput">Email address  *</label> 
+			<input type="email" class="form-control" name="emailInput" id="emailInput" placeholder="jane.doe@gmail.com" aria-describedby="emailInputStatus">
+			<span id="emailIcon" aria-hidden="true"></span> 
+			<span id="emailInputStatus" class="errorHeader">Email address is required!</span>
+		</div>	
+		<br />
+		<div class="form-group has-feedback">
+			<label for="informationInput">Informations *</label> 
+			<textarea class="form-control" rows="3" maxlength="250" name="informationInput" id="informationInput" placeholder="Enter text here..." aria-describedby="informationInputStatus"></textarea>
+			<span id="informationIcon" aria-hidden="true"></span>
+			<span id="informationInputStatus" class="errorHeader">Information text is required!</span>
+		</div>
+		<br />
+		<div class="form-group has-feedback"> 
+			<label for="paymantAmountInput">Payment amount *</label>
+			<div class="input-group">
+		        <div class="input-group-addon">PLN</div>
+		      	<input type="text" class="form-control" name="paymantAmountInput" id="paymantAmountInput" placeholder="10" aria-describedby="paymentAmountInputStatus" onblur="paymentValidate()">
+		        <div class="input-group-addon">.00</div>
+		    </div>
+		    <span id="paymentAmountIcon" aria-hidden="true"></span>
+		    <span id="paymentAmountInputStatus" class="errorHeader">Payment amount is required!</span>
+		</div>
+		<br />
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form> 	
+
+</body>
+</html>	

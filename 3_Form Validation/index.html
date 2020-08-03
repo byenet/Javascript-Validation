@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+        <div class="container">
+            <div class="header mt-5">
+                <h2>Create Account</h2>
+            </div>
+            
+            <form class="form m-5" onsubmit="return validateForm()"> 
+                <div class="form-group">
+                    <label for="TaiKhoan" class="font-weight-bold">Tài khoản</label>
+                    <input id="TaiKhoan" class="form-control w-50" placeholder="Nhập vào tài khoản" name="TaiKhoan" />
+                    <div id="taiKhoanStatus"></div>
+                </div>
+                <div class="form-group">
+                    <label for="HoTen" class="font-weight-bold">Họ tên</label>
+                    <input id="HoTen" class="form-control w-50" placeholder="Nhập vào họ tên" name="HoTen" />
+                    <div id="hoTenStatus"></div>
+                </div>
+                <div class="form-group">
+                    <label for="MatKhau" class="font-weight-bold">Mật khẩu</label>
+                    <input id="MatKhau" class="form-control w-50" placeholder="Nhập vào mật khẩu" type="password" name="MatKhau"/>
+                    <div id="matKhauStatus"></div>
+                </div>
+                <div class="form-group">
+                    <label for = "Email" class="font-weight-bold">Email</label>
+                    <input id="Email" class="form-control w-50" placeholder="Nhập vào Email" name="Email"/>
+                    <div id="emailStatus"></div>
+                </div>
+                <div class="form-group">
+                    <label for="SoDienThoai" class="font-weight-bold">Số điện thoại</label>
+                    <input id="SoDienThoai" class="form-control w-50" placeholder="Nhập vào số điện thoại" name="SoDienThoai"/>
+                    <div id="phoneStatus"></div>
+                </div>    
+                
+                <div>
+                    <input class="btn btn-primary mt-3" id="submit-button" type="submit" value="Sign Up">
+                </div>
+            </form>
+            
+            
+
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
